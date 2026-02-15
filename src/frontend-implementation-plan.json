@@ -1,0 +1,60 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Remove in-app simulation/fake disclosures and neutralize branding copy",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "summary": "Remove all user-facing UI copy that describes the app as a simulation/fake/virtual/demo product and replace with neutral product language.",
+      "acceptanceCriteria": [
+        "The dashboard no longer shows the 'Simulation Notice' alert and no other notice/disclosure about simulation/fake/virtual appears on the dashboard.",
+        "The login screen no longer contains 'Simulation Notice' content and does not use the words 'simulated', 'fake', or 'virtual' in its welcome/description text.",
+        "The digital card UI no longer shows 'Simulated Card' and the below-card caption no longer states it is simulated or for demonstration purposes.",
+        "The Add Money dialog description no longer references a 'simulated balance' (or equivalent) and uses neutral language.",
+        "A quick text search across frontend source for common disclosure terms (at minimum: 'simulation', 'simulated', 'fake', 'virtual', 'demonstration') finds no remaining user-facing UI strings."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Update the logged-out (login) screen copy to remove any simulation/fake/virtual/demo wording; remove the 'Simulation Notice' block entirely and replace with neutral onboarding text that refers only to a digital card and balance."
+        },
+        {
+          "path": "frontend/src/pages/CardDashboard.tsx",
+          "operation": "modify",
+          "description": "Remove the dashboard 'Simulation Notice' Alert and any other simulation/fake/virtual/demo disclosure copy; revise the informational section so its heading and bullets use neutral product language (no simulation/fake/virtual/demo references). Also clean up unused imports/icons caused by removing the notice UI."
+        },
+        {
+          "path": "frontend/src/components/DigitalCard.tsx",
+          "operation": "modify",
+          "description": "Replace the 'Simulated Card' label with neutral wording (e.g., 'Digital Card') and rewrite/remove the below-card caption so it no longer mentions simulated or demonstration purposes."
+        },
+        {
+          "path": "frontend/src/components/AddMoneyDialog.tsx",
+          "operation": "modify",
+          "description": "Update the Add Money dialog description text to remove references to a simulated/virtual balance and use neutral language (e.g., adding to your balance)."
+        },
+        {
+          "path": "frontend/src/components/ProfileSetupDialog.tsx",
+          "operation": "modify",
+          "description": "Update profile setup dialog description text to remove any mention of 'simulated' and keep the onboarding language neutral (digital card + balance only)."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Update the base document title to remove 'Fake'/'Simulated' wording and use a neutral app title.",
+      "acceptanceCriteria": [
+        "The <title> in frontend/index.html does not contain 'Fake' or 'Simulated'.",
+        "The browser tab title renders the updated neutral title when the app loads."
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/index.html",
+          "operation": "modify",
+          "description": "Change the document <title> to a neutral English title consistent with the app branding (remove any 'Fake'/'Simulated' wording)."
+        }
+      ]
+    }
+  ]
+}

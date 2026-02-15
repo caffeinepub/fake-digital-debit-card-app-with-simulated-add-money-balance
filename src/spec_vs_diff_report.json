@@ -1,0 +1,43 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T23:34:41.970Z",
+  "summary": "REQ-6 and REQ-7 appear to be implemented: simulation/fake/virtual disclosure copy is removed/replaced in the visible login/dashboard/card/add-money UI, and the HTML document title is updated to a neutral title. However, some additional unrequested changes (styling/theme and hook behavior) were also introduced.",
+  "missing_requirements": [],
+  "hallucinated_features": [
+    {
+      "description": "Visual theme overhaul (new warm neutral OKLCH color system and Tailwind theme/shadows) beyond removing simulation-related wording.",
+      "reason": "BuildRequest is narrowly scoped to removing simulation/fake/virtual disclosure copy and updating the document title; it explicitly lists unrelated additions as non-goals.",
+      "evidence": [
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js",
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Authentication/logout behavior change: LoginButton clears query cache on logout.",
+      "reason": "Not requested; BuildRequest non-goals include changing the app’s authentication flow (Internet Identity).",
+      "evidence": [
+        "frontend-file-summaries.txt (LoginButton summary)"
+      ]
+    },
+    {
+      "description": "React Query/actor dependency behavior adjustments to prevent modal flash (useUserProfile/useBalance hook changes).",
+      "reason": "Not requested as part of removing simulation disclosure copy; this is functional behavior work outside the stated scope.",
+      "evidence": [
+        "frontend-file-summaries.txt (useBalance/useUserProfile summaries)"
+      ]
+    }
+  ],
+  "confidence": 0.74,
+  "changed_files": [
+    "frontend-file-summaries.txt",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/AddMoneyDialog.tsx",
+    "frontend/src/components/DigitalCard.tsx",
+    "frontend/src/components/ProfileSetupDialog.tsx",
+    "frontend/src/pages/CardDashboard.tsx",
+    "project_state.json"
+  ]
+}

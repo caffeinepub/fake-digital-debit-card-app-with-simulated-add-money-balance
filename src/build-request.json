@@ -1,0 +1,68 @@
+{
+  "kind": "build_request",
+  "title": "Remove all in-app 'simulation' disclosure and wording",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-6",
+      "text": "Remove all user-facing in-app UI copy that describes the app as a simulation, fake product, virtual balance, or otherwise discloses that it is not a real payment product. Replace the removed copy with neutral product language that does not mention simulation/fake/virtual (e.g., refer to a \"digital card\" and \"balance\" only).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "I mean in the app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The dashboard no longer shows the 'Simulation Notice' alert and no other notice/disclosure about simulation/fake/virtual appears on the dashboard.",
+        "The login screen no longer contains 'Simulation Notice' content and does not use the words 'simulated', 'fake', or 'virtual' in its welcome/description text.",
+        "The digital card UI no longer shows 'Simulated Card' and the below-card caption no longer states it is simulated or for demonstration purposes.",
+        "The Add Money dialog description no longer references a 'simulated balance' (or equivalent) and uses neutral language.",
+        "A quick text search across frontend source for common disclosure terms (at minimum: 'simulation', 'simulated', 'fake', 'virtual', 'demonstration') finds no remaining user-facing UI strings."
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Update the document title (frontend/index.html) to remove 'Fake'/'Simulated' wording and use a neutral English title consistent with the app branding.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-6"
+        ],
+        "quotes": [
+          "I mean in the app"
+        ]
+      },
+      "acceptanceCriteria": [
+        "The <title> in frontend/index.html does not contain 'Fake' or 'Simulated'.",
+        "The browser tab title renders the updated neutral title when the app loads."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not edit files under frontend/src/components/ui (compose them only).",
+    "Do not modify any files in frontend immutablePaths: frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, frontend/src/main.tsx, frontend/src/components/ui.",
+    "Backend canister logic and persistence behavior must remain unchanged for this request."
+  ],
+  "nonGoals": [
+    "Adding new features unrelated to removing in-app simulation/fake disclosures (e.g., payments, real card issuance, or real banking integrations).",
+    "Changing the app’s authentication flow (Internet Identity).",
+    "Renaming generated asset filenames or changing image generation (no new images required for this request)."
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  },
+  "userProfileUpdate": {
+    "goalsToAdd": [],
+    "goalsToRemove": [],
+    "preferencesToAdd": [],
+    "preferencesToRemove": [],
+    "miscToAdd": [],
+    "miscToRemove": [],
+    "fieldsToSet": {},
+    "fieldsToDelete": []
+  }
+}

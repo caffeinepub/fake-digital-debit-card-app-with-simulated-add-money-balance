@@ -1,2 +1,3 @@
-# fake-digital-debit-card-app-with-simulated-add-money-balance
-Exported from Caffeine project: Fake Digital Debit Card App with Simulated Add Money Balance
+## 
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

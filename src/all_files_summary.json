@@ -1,0 +1,22 @@
+{
+  "backend/main.mo": "Motoko canister managing user profiles and balances with access control enforcing user and admin permissions.",
+  "feature_evidence.json": "Feature evidence report listing UI copy changes and related files for compliance with neutral product language requirements.",
+  "frontend-file-summaries.txt": "Prewritten summaries describing the purpose and UI changes of various frontend files after branding updates.",
+  "frontend/index.css": "Tailwind CSS base styles defining warm neutral OKLCH color variables for light and dark themes.",
+  "frontend/index.html": "HTML entry point setting the neutral document title and mounting the React app.",
+  "frontend/src/App.tsx": "Main React component handling authentication, profile setup, and routing to the card dashboard.",
+  "frontend/src/components/AddMoneyDialog.tsx": "Modal allowing users to enter and submit an amount to add to their balance with validation and quick options.",
+  "frontend/src/components/DigitalCard.tsx": "Component rendering a styled digital debit card with card details and branding.",
+  "frontend/src/components/LoginButton.tsx": "Button component managing Internet Identity login/logout and query cache clearing.",
+  "frontend/src/components/ProfileSetupDialog.tsx": "Modal form for entering and validating a user's name, then saving the profile via mutation.",
+  "frontend/src/hooks/useActor.ts": "Creates and caches a backend actor based on Internet Identity and refreshes dependent queries when identity changes.",
+  "frontend/src/hooks/useBalance.ts": "Provides hooks to fetch the user's balance and add money via actor mutations with query invalidation.",
+  "frontend/src/hooks/useInternetIdentity.ts": "Context provider and hooks for managing Internet Identity login, stored identities, and login state.",
+  "frontend/src/hooks/useUserProfile.ts": "Hooks to fetch and update the caller's user profile using the backend actor with query invalidation.",
+  "frontend/src/index.css": "Tailwind setup defining light and dark theme CSS variables and base styling.",
+  "frontend/src/main.tsx": "App entry point setting up React Query and Internet Identity providers before rendering App.",
+  "frontend/src/pages/CardDashboard.tsx": "Dashboard displaying balance, digital card, profile name, and add‑money dialog with loading states.",
+  "frontend/src/utils/urlParams.ts": "Utility functions for reading, persisting, and clearing URL and session-based parameters.",
+  "frontend/tailwind.config.js": "Tailwind config enabling dark mode, custom fonts, OKLCH color tokens, animations, and plugins for typography, container queries, and animations.",
+  "project_state.json": "JSON describing project state, feature definitions, architectural notes, and pending feature requests for a digital debit card app."
+}

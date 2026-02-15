@@ -1,0 +1,13 @@
+{
+  "frontend/src/App.tsx": "Main application component that handles authentication flow, profile setup, and renders the card dashboard with updated neutral branding (InstaWallet) and removed all simulation notices from login screen.",
+  "frontend/src/pages/CardDashboard.tsx": "Main dashboard page displaying the user's balance, digital card, and add money button with updated neutral branding and removed simulation alert/disclaimer, replaced info section with neutral feature list.",
+  "frontend/src/components/DigitalCard.tsx": "Reusable digital debit card component with updated neutral labeling (\"Digital Card\" instead of \"Simulated Card\") and neutral caption below card.",
+  "frontend/src/components/AddMoneyDialog.tsx": "Modal dialog for adding money with updated neutral description text removing \"simulated balance\" reference.",
+  "frontend/src/components/LoginButton.tsx": "Authentication button component that handles login/logout with Internet Identity and clears query cache on logout.",
+  "frontend/src/components/ProfileSetupDialog.tsx": "First-time user profile setup dialog with updated neutral welcome message and description removing simulation references.",
+  "frontend/src/hooks/useBalance.ts": "React Query hooks for fetching user balance and adding money with automatic cache invalidation.",
+  "frontend/src/hooks/useUserProfile.ts": "React Query hooks for fetching and saving user profile with proper actor dependency handling to prevent modal flash.",
+  "frontend/src/index.css": "Global styles with warm neutral OKLCH color system for both light and dark modes, avoiding generic blue/purple palette.",
+  "frontend/tailwind.config.js": "Tailwind configuration with custom warm neutral color tokens, typography, and enhanced shadows for the card design.",
+  "frontend/index.html": "HTML entry point with updated neutral title \"InstaWallet - Digital Debit Card\" removing all simulation/fake references."
+}

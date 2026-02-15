@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 5,
+  "summary": "Build a fake digital debit card app with an \"Add Money\" button, without mentioning that it is a simulation in the in-app UI/copy.",
+  "architectural_notes": [
+    "In-app UI/copy should not mention that the debit card/balance is a simulation; avoid \"simulated\" or similar disclosure language in the app screens."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [
+    {
+      "id": "feature-create-a-simulated-fake-digital-debit-card-app-experience-that-displays-a-digital-card-and-a-current-balance-with-clear-in-app-disclosure-that-it-is-a-simulation-and-not-a-real-payment-product",
+      "title": "Create a simulated (fake) digital debit card app experience that displays a digital card and a current balance, with clear in-app disclosure that it is a simulation and not a real payment product.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-add-money-button-and-flow-that-lets-the-user-increase-the-displayed-balance-by-entering-an-amount-validating-input-and-updating-the-balance-in-the-ui",
+      "title": "Implement an \"Add Money\" button and flow that lets the user increase the displayed balance by entering an amount, validating input, and updating the balance in the UI.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-provide-a-cohesive-distinctive-visual-theme-for-the-app-colors-typography-spacing-and-component-styling-and-apply-it-consistently-across-the-main-screen-and-add-money-flow",
+      "title": "Provide a cohesive, distinctive visual theme for the app (colors, typography, spacing, and component styling) and apply it consistently across the main screen and add-money flow.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-generated-static-image-assets-to-support-the-visual-theme-and-render-them-from-frontend-static-assets-do-not-serve-images-from-the-backend",
+      "title": "Add generated static image assets to support the visual theme, and render them from frontend static assets (do not serve images from the backend).",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-remove-all-user-facing-in-app-ui-copy-that-describes-the-app-as-a-simulation-fake-product-virtual-balance-or-otherwise-discloses-that-it-is-not-a-real-payment-product-replace-the-removed-copy-with-neutral-product-language-that-does-not-mention-simulation-fake-virtual-e-g-refer-to-a-digital-card-and-balance-only",
+      "title": "Remove all user-facing in-app UI copy that describes the app as a simulation, fake product, virtual balance, or otherwise discloses that it is not a real payment product. Replace the removed copy with neutral product language that does not mention simulation/fake/virtual (e.g., refer to a \"digital card\" and \"balance\" only).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-document-title-frontend-index-html-to-remove-fake-simulated-wording-and-use-a-neutral-english-title-consistent-with-the-app-branding",
+      "title": "Update the document title (frontend/index.html) to remove 'Fake'/'Simulated' wording and use a neutral English title consistent with the app branding.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a fake/simulated digital debit card app UI.",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Add an \"Add Money\" button/flow to increase the displayed balance (simulated funds).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Add backend canister support to store each signed-in user's simulated balance and to apply balance increments when \"Add Money\" is submitted.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Remove/avoid any in-app disclosure/copy that calls the experience a simulation (no \"simulated\" language in the app UI).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Fake Digital Debit Card App with Simulated Add Money Balance",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
